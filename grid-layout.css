@@ -5,15 +5,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* font-family: "Exile", system-ui; */
+/* font-family: "Lilita One", sans-serif; */
 body {
   background-color: mistyrose;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-grid-container {
   display: grid;
   grid-template-rows: 
-  10em 50vh auto 10em;
+  8rem 50vh auto 8rem;
   grid-template-columns: 
   1fr 5fr 2fr 1fr;
   grid-template-areas: 
@@ -26,22 +28,71 @@ body {
 header {
   grid-area: header;
 }
+
 header, 
 footer {
-  background-color: lightblue;
+  background-color: burlywood;
 }
 
 .hero {
   grid-area: hero;
-  background-color: aquamarine;
+  background-color: mistyrose;
+  background-image: url('images/coffee-beans-bg.jpg');
+  background-size: cover;
+  /* background-blend-mode: luminosity; */
+  background-blend-mode: multiply;
+  isolation: isolate;
+
+  position: relative;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  /*  style="font-size:3rem; text-shadow: 4px 4px 5px rgb(0, 0, 0, 0.7);" */
 }
 
-.main-and-sidebar-container {
-  border: 2px dashed rgb(107, 107, 107);
+.hero::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background-image: linear-gradient(rgb(142, 16, 16), rgb(224, 25, 125));
+  opacity: 0.25;
+  z-index: -1;
 }
 
 .main {
   grid-area: main;
+  border: 2px dashed rgb(107, 107, 107);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content auto;
+  grid-template-areas: 
+  'image title'
+  'image content';
+}
+.card .image-wrapper {
+  grid-area: image;
+  /* width: 300px;
+  height: 300px; */
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  grid-area: title;
+}
+
+.card .description {
+  grid-area: content;
 }
 
 .sidebar {
