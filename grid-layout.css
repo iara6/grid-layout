@@ -9,3 +9,46 @@
 body {
   background-color: mistyrose;
 }
+
+.main-grid-container {
+  display: grid;
+  grid-template-rows: 
+  10em 50vh auto 10em;
+  grid-template-columns: 
+  1fr 5fr 2fr 1fr;
+  grid-template-areas: 
+  'header header header header'
+  'hero hero hero hero'
+  '. main sidebar .'
+  'footer footer footer footer';
+}
+
+header {
+  grid-area: header;
+}
+header, 
+footer {
+  background-color: lightblue;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: aquamarine;
+}
+
+.main-and-sidebar-container {
+  border: 2px dashed rgb(107, 107, 107);
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: pink;
+}
+
+footer {
+  grid-area: footer;
+}
