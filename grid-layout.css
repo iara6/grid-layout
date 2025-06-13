@@ -47,6 +47,7 @@ footer {
   display: grid;
   place-content: center;
   text-align: center;
+  padding-inline: 2.5rem;
   /*  style="font-size:3rem; text-shadow: 4px 4px 5px rgb(0, 0, 0, 0.7);" */
 }
 
@@ -59,19 +60,38 @@ footer {
   z-index: -1;
 }
 
+.hero h1 {
+  color: rgba(254, 241, 225, 0.75);
+  /* text-shadow: 0 0 2px rgb(246, 128, 128); */
+  font-size: 4rem;
+  font-family: "Exile", system-ui;
+}
+
+.hero p {
+  color: rgba(254, 241, 225, 0.75);
+  font-size: 1.2rem;
+}
+
 .main {
   grid-area: main;
+  padding: 1.5rem 1.5rem 1.5rem 0;
   border: 2px dashed rgb(107, 107, 107);
 }
 
 .card {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: min-content auto;
   grid-template-areas: 
   'image title'
   'image content';
+  gap: 1.5rem;
 }
+
+.card:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .card .image-wrapper {
   grid-area: image;
   /* width: 300px;
