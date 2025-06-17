@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /* font-family: "Exile", system-ui; */
 /* font-family: "Lilita One", sans-serif; */
 body {
@@ -27,12 +31,18 @@ body {
 
 header {
   grid-area: header;
+  display: flex;
 }
 
 header, 
 footer {
   /* background-color: burlywood; */
   background-color: rgb(123, 67, 45);
+}
+
+header .logo img {
+  height: 120px;
+
 }
 
 .hero {
@@ -62,7 +72,7 @@ footer {
 }
 
 .hero h1 {
-  color: rgb(254, 226, 195);
+  color: #fee2c3;
   text-shadow: 0 0 10px rgba(60, 3, 3, 0.8);
   font-size: 4rem;
   font-family: "Exile", system-ui;
