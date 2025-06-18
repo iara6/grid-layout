@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-cream: rgb(254, 226, 195);
+  --color-brown:  rgb(123, 67, 45);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,7 +24,7 @@ body {
 .main-grid-container {
   display: grid;
   grid-template-rows: 
-  8rem 55vh auto 8rem;
+  6rem 55vh auto 8rem;
   grid-template-columns: 
   1fr 5fr 2fr 1fr;
   grid-template-areas: 
@@ -31,17 +36,42 @@ body {
 
 header {
   grid-area: header;
+}
+
+header nav {
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav li {
+  list-style: none;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--color-cream);
+}
+
+header .menu-options,
+.social-links {
+  display: flex;
+}
+
+.menu-options li {
+  font-size: 1.3rem;
+  padding-inline: 0.5rem;
 }
 
 header, 
 footer {
   /* background-color: burlywood; */
-  background-color: rgb(123, 67, 45);
+  background-color: var(--color-brown);
 }
 
 header .logo img {
-  height: 80px;
+  height: 60px;
 }
 
 .hero {
@@ -78,14 +108,14 @@ header .logo img {
   
 }
 .hero h1 {
-  color: #fee2c3;
+  color: var(--color-cream);
   text-shadow: 0 0 10px rgba(60, 3, 3, 0.8);
   font-size: 4rem;
   font-family: "Exile", system-ui;
 }
 
 .hero p {
-  color: rgb(254, 226, 195);
+  color: var(--color-cream);
   font-size: 1.2rem;
 }
 
@@ -186,7 +216,7 @@ header .logo img {
 }
 
 .sidebar a:visited {
-  color: rgb(123, 67, 45);
+  color: var(--color-brown);
 }
 
 footer {
