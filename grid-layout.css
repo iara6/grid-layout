@@ -19,7 +19,7 @@ body {
 .main-grid-container {
   display: grid;
   grid-template-rows: 
-  8rem 50vh auto 8rem;
+  8rem 55vh auto 8rem;
   grid-template-columns: 
   1fr 5fr 2fr 1fr;
   grid-template-areas: 
@@ -41,8 +41,7 @@ footer {
 }
 
 header .logo img {
-  height: 120px;
-
+  height: 80px;
 }
 
 .hero {
@@ -70,7 +69,14 @@ header .logo img {
   opacity: 0.25;
   z-index: -1;
 }
-
+.hero-logo-div {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.hero-logo-div img {
+  height: 220px;
+  
+}
 .hero h1 {
   color: #fee2c3;
   text-shadow: 0 0 10px rgba(60, 3, 3, 0.8);
