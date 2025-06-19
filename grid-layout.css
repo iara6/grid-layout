@@ -9,6 +9,7 @@
 :root {
   --color-cream: rgb(254, 226, 195);
   --color-brown:  rgb(123, 67, 45);
+  --color-pink: pink;
 }
 
 html {
@@ -24,7 +25,7 @@ body {
 .main-grid-container {
   display: grid;
   grid-template-rows: 
-  6rem 55vh auto 8rem;
+  6rem 55vh auto 12rem;
   grid-template-columns: 
   1fr 5fr 2fr 1fr;
   grid-template-areas: 
@@ -36,6 +37,7 @@ body {
 
 header {
   grid-area: header;
+  border-bottom: 1px solid var(--color-pink);
 }
 
 header nav {
@@ -62,6 +64,24 @@ header .menu-options,
 .menu-options li {
   font-size: 1.3rem;
   padding-inline: 0.5rem;
+}
+
+.menu-options li a,
+.social-links li a {
+  transition: color 250ms ease-in-out;
+}
+
+.menu-options li:hover a,
+.social-links li:hover a {
+  color: var(--color-pink);
+}
+
+.social-links li:not(:last-child)  {
+  margin-right: 7px;
+}
+
+.social-links i {
+  font-size: 1.3rem;
 }
 
 header, 
@@ -99,14 +119,16 @@ header .logo img {
   opacity: 0.25;
   z-index: -1;
 }
+
 .hero-logo-div {
   text-align: center;
   margin-bottom: 1rem;
 }
+
 .hero-logo-div img {
   height: 220px;
-  
 }
+
 .hero h1 {
   color: var(--color-cream);
   text-shadow: 0 0 10px rgba(60, 3, 3, 0.8);
@@ -117,12 +139,14 @@ header .logo img {
 .hero p {
   color: var(--color-cream);
   font-size: 1.2rem;
+  text-shadow: 0 0 6px rgba(60, 3, 3, 0.8);
 }
 
 .main {
   grid-area: main;
   padding: 1.5rem;
-  border: 2px dashed rgb(107, 107, 107);
+  margin: 2rem 0;
+  border: 2px dashed var(--color-brown);
 }
 
 .introduction {
@@ -131,7 +155,7 @@ header .logo img {
 
 .introduction h2 {
   text-align: center;
-  line-height: 3rem;
+  margin-bottom: 0.5rem;
   font-family: "Lilita One", sans-serif;
   font-size: 2rem;
   font-weight: 300;
@@ -199,7 +223,7 @@ header .logo img {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: pink;
+  background-color: var(--color-pink);
   margin: 2rem 0 2rem 1rem;
   padding: 1.5rem;
   border-radius: 0.6rem;
@@ -221,4 +245,43 @@ header .logo img {
 
 footer {
   grid-area: footer;
+  border-top: 1px solid var(--color-pink);
+}
+
+.logo-social-links-div {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.logo-social-links-div nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.logo-social-links-div nav li:not(:last-child) {
+  margin-right: 6px;
+}
+
+.logo-social-links-div li i {
+  transition: color 250ms ease-in-out;
+}
+
+.logo-social-links-div li:hover i {
+  color: var(--color-pink);
+}
+
+.logo-social-links-div li i{
+  color: var(--color-cream);
+}
+
+.footer-logo {
+  height: 100px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--color-cream);
+  margin-top: 0.5rem;
 }
