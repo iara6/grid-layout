@@ -10,6 +10,8 @@
   --color-cream: rgb(254, 226, 195);
   --color-brown:  rgb(123, 67, 45);
   --color-pink: pink;
+  --color-white: white;
+  --color-mistyrose: mistyrose;
 }
 
 html {
@@ -18,7 +20,8 @@ html {
 /* font-family: "Exile", system-ui; */
 /* font-family: "Lilita One", sans-serif; */
 body {
-  background-color: mistyrose;
+  position: relative;
+  background-color: var(--color-mistyrose);
   font-family: "Poppins", sans-serif;
 }
 
@@ -73,7 +76,7 @@ header .menu-options,
 
 .menu-options li:hover a,
 .social-links li:hover a {
-  color: var(--color-pink);
+  color: var(--color-white);
 }
 
 .social-links li:not(:last-child)  {
@@ -269,7 +272,7 @@ footer {
 }
 
 .logo-social-links-div li:hover i {
-  color: var(--color-pink);
+  color: var(--color-white);
 }
 
 .logo-social-links-div li i{
@@ -284,4 +287,33 @@ footer {
   font-size: 0.8rem;
   color: var(--color-cream);
   margin-top: 0.5rem;
+}
+
+.to-top-btn {
+  position: absolute;
+  right: 3rem;
+  top: 130vh;
+  bottom: 14rem;
+}
+
+/* SCROLL TO TOP BUTTON */
+.to-top-btn a {
+  position: sticky;
+  top: 90vh;
+
+  text-decoration: none;
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  padding: 1.5rem 1rem 0.5rem;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: opacity 250ms ease-in-out;
+}
+
+.to-top-btn a:hover {
+  opacity: 0.9;
+}
+
+.to-top-btn a i {
+  font-size: 2rem;
 }
