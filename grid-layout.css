@@ -246,6 +246,28 @@ header .logo img {
   color: var(--color-brown);
 }
 
+.coffee-facts {
+  margin-top: 1.5rem;
+}
+
+.coffee-facts div {
+  background-color: var(--color-cream);
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  box-shadow: 0 0 2px 2px rgb(123, 67, 45, 0.1);
+}
+
+.coffee-facts div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.coffee-facts div i {
+  font-size: 1.2rem;
+  color: var(--color-brown);
+  margin-right: 5px;
+}
+
 footer {
   grid-area: footer;
   border-top: 1px solid var(--color-pink);
@@ -297,6 +319,7 @@ footer {
 }
 
 /* SCROLL TO TOP BUTTON */
+
 .to-top-btn a {
   position: sticky;
   top: 90vh;
