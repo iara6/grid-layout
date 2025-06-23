@@ -7,11 +7,29 @@
 }
 
 :root {
-  --color-cream: rgb(254, 226, 195);
-  --color-brown:  rgb(123, 67, 45);
-  --color-pink: pink;
-  --color-white: white;
-  --color-mistyrose: mistyrose;
+  --color-cream: rgb(254, 226, 195); /* prim */
+  --color-brown: rgb(123, 67, 45); /* text */
+  --color-brown2: rgb(110, 61, 41); 
+  --color-pink: pink; /* secon */
+  --color-white: white; /* accen */
+  --color-mistyrose: mistyrose; /* bg */
+  --color-black: black; /* main text */
+  /* gradient colors */
+  --color-gradient1: rgb(142, 16, 16);
+  --color-gradient2: rgb(224, 25, 125);
+}
+
+.dark-mode {
+  --color-cream: rgb(216, 181, 142); /* prim + */
+  --color-brown:  rgb(78, 49, 37); /* text + */
+  --color-brown2: rgb(218, 190, 159); 
+  --color-pink: rgb(72, 28, 43); /* secon */
+  --color-white: rgb(254, 226, 195); /* accen + */
+  --color-mistyrose: rgb(77, 42, 64); /* bg */
+  --color-black: rgb(254, 226, 195); /* main text +*/
+   /* gradient colors */
+  --color-gradient1: rgb(88, 10, 10);
+  --color-gradient2: rgb(118, 15, 173);
 }
 
 html {
@@ -23,6 +41,7 @@ body {
   position: relative;
   background-color: var(--color-mistyrose);
   font-family: "Poppins", sans-serif;
+  transition: all 250ms ease;
 }
 
 .main-grid-container {
@@ -91,6 +110,7 @@ header,
 footer {
   /* background-color: burlywood; */
   background-color: var(--color-brown);
+  transition: all 250ms ease;
 }
 
 header .logo img {
@@ -118,7 +138,7 @@ header .logo img {
   position: absolute;
   inset: 0;
   content: '';
-  background-image: linear-gradient(rgb(142, 16, 16), rgb(224, 25, 125));
+  background-image: linear-gradient(var(--color-gradient1), var(--color-gradient2));
   opacity: 0.25;
   z-index: -1;
 }
@@ -150,6 +170,7 @@ header .logo img {
   padding: 1.5rem;
   margin: 2rem 0;
   border: 2px dashed var(--color-brown);
+  color: var(--color-black);
 }
 
 .introduction {
@@ -198,7 +219,7 @@ header .logo img {
   position: absolute;
   inset: 0;
   content: '';
-  background-image: linear-gradient(rgb(142, 16, 16), rgb(224, 25, 125));
+  background-image: linear-gradient(var(--color-gradient1), var(--color-gradient2));
   opacity: 0.2;
   z-index: +1; 
 }
@@ -227,23 +248,26 @@ header .logo img {
 .sidebar {
   grid-area: sidebar;
   background-color: var(--color-pink);
+  height: fit-content;
   margin: 2rem 0 2rem 1rem;
   padding: 1.5rem;
   border-radius: 0.6rem;
+  transition: all 250ms ease;
 }
 
 .sidebar h2 {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+  color: var(--color-black);
 }
 
 .sidebar a {
-  color: rgb(30, 30, 30);
+  color: var(--color-black);
 }
 
 .sidebar a:visited {
-  color: var(--color-brown);
+  color: var(--color-brown2);
 }
 
 .coffee-facts {
@@ -303,6 +327,7 @@ footer {
 
 .footer-logo {
   height: 100px;
+  transition: all 250ms ease-in-out;
 }
 
 .copyright {
@@ -339,4 +364,57 @@ footer {
 
 .to-top-btn a i {
   font-size: 2rem;
+}
+
+/* DARK MODE BUTTTON, SWITCH */
+
+.switch-button {
+  position: relative;
+  height: 1.7rem;
+  width: 3.5rem;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: var(--color-cream);
+  transition: all 250ms ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} 
+
+.switch-button span {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: var(--color-brown);
+  cursor: pointer;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-color: var(--color-pink);
+  outline: 1px solid var(--color-brown);
+  transition: all 250ms ease-out;
+  z-index: 10;
+}
+
+.slide .switch {
+  left: 50%;
+}
+
+.dark-mode .footer-logo,
+.dark-mode header .logo img {
+  opacity: 0.75;
+}
+
+.dark-mode .hero-logo-div img {
+  filter: brightness(85%) saturate(1.7);
+}
+
+.dark-mode .to-top-btn a {
+  outline: 1px solid var(--color-brown2);
 }
