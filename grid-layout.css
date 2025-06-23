@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+/* font-family: "Exile", system-ui; */
+/* font-family: "Lilita One", sans-serif; */
+
 :root {
   --color-cream: rgb(254, 226, 195); /* prim */
   --color-brown: rgb(123, 67, 45); /* text */
@@ -20,13 +23,13 @@
 }
 
 .dark-mode {
-  --color-cream: rgb(216, 181, 142); /* prim + */
-  --color-brown:  rgb(78, 49, 37); /* text + */
+  --color-cream: rgb(216, 181, 142); /* prim */
+  --color-brown:  rgb(78, 49, 37); /* text */
   --color-brown2: rgb(218, 190, 159); 
   --color-pink: rgb(72, 28, 43); /* secon */
-  --color-white: rgb(254, 226, 195); /* accen + */
+  --color-white: rgb(254, 226, 195); /* accen */
   --color-mistyrose: rgb(77, 42, 64); /* bg */
-  --color-black: rgb(254, 226, 195); /* main text +*/
+  --color-black: rgb(254, 226, 195); /* main text */
    /* gradient colors */
   --color-gradient1: rgb(88, 10, 10);
   --color-gradient2: rgb(118, 15, 173);
@@ -35,8 +38,7 @@
 html {
   scroll-behavior: smooth;
 }
-/* font-family: "Exile", system-ui; */
-/* font-family: "Lilita One", sans-serif; */
+
 body {
   position: relative;
   background-color: var(--color-mistyrose);
@@ -108,7 +110,6 @@ header .menu-options,
 
 header, 
 footer {
-  /* background-color: burlywood; */
   background-color: var(--color-brown);
   transition: all 250ms ease;
 }
@@ -122,7 +123,6 @@ header .logo img {
   background-color: mistyrose;
   background-image: url('images/coffee-beans-bg.jpg');
   background-size: cover;
-  /* background-blend-mode: luminosity; */
   background-blend-mode: multiply;
   isolation: isolate;
 
@@ -131,7 +131,6 @@ header .logo img {
   place-content: center;
   text-align: center;
   padding-inline: 2.5rem;
-  /*  style="font-size:3rem; text-shadow: 4px 4px 5px rgb(0, 0, 0, 0.7);" */
 }
 
 .hero::before {
@@ -206,8 +205,6 @@ header .logo img {
 
 .card .image-wrapper {
   grid-area: image;
-  /* width: 300px;
-  height: 300px; */
   width: 100%;
   max-width: 250px;
   aspect-ratio: 1 / 1;
@@ -382,6 +379,10 @@ footer {
   justify-content: space-around;
 } 
 
+.switch-button:hover {
+  background-color: var(--color-white);
+}
+
 .switch-button span {
   display: inline-block;
   font-size: 1.1rem;
@@ -417,4 +418,16 @@ footer {
 
 .dark-mode .to-top-btn a {
   outline: 1px solid var(--color-brown2);
+}
+
+.dark-mode header {
+  border-bottom: 1px solid var(--color-brown2);
+}
+
+.dark-mode .main {
+  border: 2px dashed var(--color-brown2);
+}
+
+.dark-mode footer {
+  border-top: 1px solid var(--color-brown2);
 }
