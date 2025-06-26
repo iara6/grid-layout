@@ -105,6 +105,7 @@ header .menu-options,
 }
 
 .social-links i {
+  transition: all 250ms ease;
   font-size: 1.3rem;
 }
 
@@ -430,4 +431,40 @@ footer {
 
 .dark-mode footer {
   border-top: 1px solid var(--color-brown2);
+}
+
+@media (max-width: 1300px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero-logo-div img {
+  height: 190px;
+  }
+}
+
+@media (max-width: 1150px) {
+  header .logo img {
+  height: 50px;
+  }
+  .menu-options li {
+  font-size: 1.1rem;
+  }
+  .social-links i {
+  font-size: 1.1rem;
+  }
+  .switch-button {
+  height: 1.5rem;
+  width: 3.2rem;
+  border-radius: 0.8rem;
+  } 
+  .switch-button span {
+  font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+  }
 }
