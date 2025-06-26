@@ -64,6 +64,28 @@ header {
   border-bottom: 1px solid var(--color-pink);
 }
 
+header .logo img {
+  height: 60px;
+}
+
+.nav-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.nav-toggle i {
+  color: var(--color-cream);
+  font-size: 1.3rem;
+  transition: color 250ms ease-in-out;
+}
+
+.nav-toggle:hover i {
+  color: var(--color-white);
+}
+
 header nav {
   height: 100%;
   display: flex;
@@ -115,9 +137,6 @@ footer {
   transition: all 250ms ease;
 }
 
-header .logo img {
-  height: 60px;
-}
 
 .hero {
   grid-area: hero;
@@ -433,7 +452,7 @@ footer {
   border-top: 1px solid var(--color-brown2);
 }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
   .hero h1 {
     font-size: 3.5rem;
   }
@@ -442,10 +461,15 @@ footer {
   }
   .hero-logo-div img {
   height: 190px;
-  }
 }
 
-@media (max-width: 1150px) {
+  .main-grid-container {
+  grid-template-columns: 
+  3rem 5fr 2fr 3rem;
+}
+}
+
+@media screen and (max-width: 1150px) {
   header .logo img {
   height: 50px;
   }
@@ -466,5 +490,117 @@ footer {
 
   .hero h1 {
     font-size: 3.2rem;
+  }
+
+  .main-grid-container {
+  grid-template-columns: 
+  2rem 5fr 2fr 2rem;
+}
+
+  .introduction h2,
+  .card h2 {
+  font-size: 1.8rem;
+  }
+  .card .image-wrapper {
+  max-width: 200px;
+  }
+  .card {
+  grid-template-columns: 200px 1fr;
+  gap: 1.3rem;
+}
+
+  .sidebar h2 {
+  font-size: 1rem;
+}
+}
+
+@media screen and (max-width: 950px) {
+  .main-grid-container {
+  grid-template-rows: 
+  6rem 55vh auto auto 12rem;
+  grid-template-areas: 
+  'header header header header'
+  'hero hero hero hero'
+  '. sidebar sidebar .'
+  '. main main .'
+  'footer footer footer footer';
+}
+
+  .introduction h2,
+  .card h2 {
+  font-size: 1.6rem;
+  }
+  .card .image-wrapper {
+  max-width: 240px;
+  }
+  .card {
+  grid-template-columns: 240px 1fr;
+  gap: 1.3rem;
+}
+
+  .sidebar {
+  margin: 1.5rem 0 0;
+  }
+  .sidebar h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  }
+  .sidebar li {
+  text-align: center;
+  list-style: none;
+  }
+  .coffee-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  }
+  .coffee-facts div:not(:last-child) {
+  margin-bottom: 0;
+  }
+  .coffee-facts div {
+  flex: 1 1 250px;
+}
+
+}
+
+@media screen and (max-width: 680px) {
+  .main-grid-container {
+  grid-template-columns: 
+  1.5rem 5fr 2fr 1.5rem;
+}
+
+  .hero h1 {
+  font-size: 2.9rem;
+  }
+  .hero p {
+  font-size: 0.9rem;
+  }
+  .hero-logo-div img {
+  height: 160px;
+}
+
+  .card {
+  grid-template-rows: min-content auto auto;
+  grid-template-areas: 
+  'title title'
+  'image image'
+  'content content';
+  gap: 1.5rem;
+  }
+  .card h2 {
+  text-align: center;
+  }
+  .card .image-wrapper {
+  max-width: 250px;
+  margin-inline: auto;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+  .menu-options {
+  height: 0;
+  overflow: hidden;
   }
 }
