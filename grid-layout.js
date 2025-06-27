@@ -17,3 +17,11 @@ const dropdownMenu = document.querySelector('.dropdown-menu');
 threeBarsBtn.addEventListener('click', () => {
   dropdownMenu.classList.toggle('show');
 });
+
+/* clicking outside the dropdown menu */
+
+window.addEventListener('click', (event) => {
+  if (!dropdownMenu.contains(event.target) && !threeBarsBtn.contains(event.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
