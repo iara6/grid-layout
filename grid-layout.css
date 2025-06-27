@@ -68,12 +68,14 @@ header .logo img {
   height: 60px;
 }
 
+.three-bars-btn-div {
+  display: none;
+}
+
 .nav-toggle {
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  display: none;
 }
 
 .nav-toggle i {
@@ -84,6 +86,39 @@ header .logo img {
 
 .nav-toggle:hover i {
   color: var(--color-white);
+}
+
+.dropdown-menu {
+  background-color: var(--color-brown);
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 6rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 10px -2px rgb(40, 36, 36, 0.7);
+
+  display: none;
+}
+
+.dropdown-menu li {
+  padding: 0.7rem 0;
+  transition: all 200ms ease-in-out;
+  cursor: pointer; 
+}
+
+.dropdown-menu li a {
+  transition: color 250ms ease-in-out;
+}
+.dropdown-menu li:hover {
+  background-color: var(--color-gradient1);
+}
+.dropdown-menu li:hover a {
+  color: var(--color-white);
+}
+
+.show {
+  display: block;
 }
 
 header nav {
@@ -596,11 +631,16 @@ footer {
   margin-inline: auto;
   }
 
-  .nav-toggle {
-    display: block;
+  .three-bars-btn-div {
+  display: block;
   }
+
+/*   .nav-toggle {
+  display: block;
+  } */
   .menu-options {
-  height: 0;
-  overflow: hidden;
+    display: none !important;
+  /* height: 0;
+  overflow: hidden; */
   }
 }
