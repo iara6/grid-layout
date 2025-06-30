@@ -314,6 +314,10 @@ footer {
   color: var(--color-black);
 }
 
+.sidebar .faq-h2 {
+  margin-top: 1rem;
+}
+
 .sidebar a {
   color: var(--color-black);
 }
@@ -510,6 +514,7 @@ footer {
   }
   .menu-options li {
   font-size: 1.1rem;
+  padding-inline: 0.3rem;
   }
   .social-links i {
   font-size: 1.1rem;
