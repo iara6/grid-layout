@@ -1,0 +1,43 @@
+.main-grid-container_gallery {
+  display: grid;
+  grid-template-rows: 
+  6rem 100vh 12rem;
+  grid-template-columns: 
+  1fr 7fr 1fr;
+  grid-template-areas: 
+  'header header header'
+  'hero hero hero'
+  'footer footer footer';
+}
+
+.hero_gallery {
+  grid-area: hero;
+  background-color: mistyrose;
+  background-image: url('images/coffee-seamless-pattern-freepik.avif');
+  background-repeat: repeat;
+  background-size: 500px;
+  background-blend-mode: multiply;
+  isolation: isolate;
+  /* opacity: 0.4; */
+
+  position: relative;
+  display: grid;
+/*   place-content: center;
+  text-align: center; */
+  padding-inline: 2.5rem;
+}
+
+.hero_gallery::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background-image: linear-gradient(var(--color-gradient1), var(--color-gradient2));
+  opacity: 0.35;
+  z-index: -1;
+}
+
+
+.gallery-container img {
+  width: 100%;
+  
+}

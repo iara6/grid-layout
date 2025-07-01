@@ -29,8 +29,8 @@ window.addEventListener('click', (event) => {
   }
 });
 
-/* FAQ section
-***************/
+/* FAQ section (sidebar)
+************************/
 const questionCollapsibleBtns = document.querySelectorAll('.question-chevron-container');
 
 questionCollapsibleBtns.forEach((btn) => {
