@@ -1,7 +1,7 @@
 .main-grid-container_gallery {
   display: grid;
   grid-template-rows: 
-  6rem 100vh 12rem;
+  6rem auto 12rem;
   grid-template-columns: 
   1fr 7fr 1fr;
   grid-template-areas: 
@@ -13,10 +13,10 @@
 .hero_gallery {
   grid-area: hero;
   background-color: mistyrose;
-  background-image: url('images/coffee-seamless-pattern-freepik.avif');
+/*   background-image: url('images/coffee-seamless-pattern-freepik.avif');
   background-repeat: repeat;
   background-size: 500px;
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; */
   isolation: isolate;
   /* opacity: 0.4; */
 
@@ -36,6 +36,66 @@
   z-index: -1;
 }
 
+.hero_gallery::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('images/coffee-seamless-pattern-freepik.avif');
+  background-repeat: repeat;
+  background-size: 500px;
+  background-blend-mode: multiply;
+  opacity: 0.3;
+  z-index: -2;
+}
+
+.grid-view-options {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.grid-view-options button {
+  font-size: 1.3rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  box-shadow: 0 0 2px 1px var(--color-brown);
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.grid-view-options button:hover {
+  background-color: var(--color-white);
+}
+
+.grid-btn.active {
+  background-color: var(--color-white);
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.image-column {
+  flex: 50%;
+  padding: 0 5px;
+}
+
+.image-column img {
+  vertical-align: middle;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 100ms linear;
+}
+
+.image-column img:hover {
+  outline: 3px solid var(--color-cream);
+}
 
 .gallery-container img {
   width: 100%;
