@@ -89,3 +89,33 @@ for (let i = 0; i < gridBtns.length; i++) {
     this.classList.add("active");
   });
 }
+
+/* Popup/modal (gallery)
+************************/
+const modal = document.querySelector('.gallery-modal');
+const galleryContainer = document.querySelector('.gallery-container');
+const images = Array.from(galleryContainer.getElementsByTagName('img'));
+const modalContent = document.querySelector('.modal-content');
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'block';
+    modalContent.src = img.src;
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+
+const closeBtn = document.querySelector('.close-button');
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.style.overflow = 'auto';
+});
+
+window.onclick = function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = 'auto';
+  }
+};

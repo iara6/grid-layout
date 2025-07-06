@@ -43,8 +43,8 @@
   background-image: url('images/coffee-seamless-pattern-freepik.avif');
   background-repeat: repeat;
   background-size: 500px;
-  background-blend-mode: multiply;
-  opacity: 0.3;
+  /* background-blend-mode: multiply; */
+  opacity: 0.25;
   z-index: -2;
 }
 
@@ -99,5 +99,52 @@
 
 .gallery-container img {
   width: 100%;
+}
+
+.gallery-modal {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding: 10vh 0;
   
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  height: 80vh;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+.close-button {
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  color: var(--color-cream);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 250ms ease-out;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 680px) {
+  .modal-content {
+    height: auto;
+    width: 100vw;
+ }
 }
