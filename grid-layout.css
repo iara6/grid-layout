@@ -110,9 +110,11 @@ header .logo img {
 .dropdown-menu li a {
   transition: color 250ms ease-in-out;
 }
+
 .dropdown-menu li:hover {
   background-color: var(--color-gradient1);
 }
+
 .dropdown-menu li:hover a {
   color: var(--color-white);
 }
@@ -171,7 +173,6 @@ footer {
   background-color: var(--color-brown);
   transition: all 250ms ease;
 }
-
 
 .hero {
   grid-area: hero;
@@ -357,7 +358,6 @@ footer {
   border-radius: 0.2rem;
   cursor: pointer;
   transition: background 250ms ease-in-out;
-  /* border: 1px solid red; */
 }
 
 .question-chevron-container h3 {
@@ -380,7 +380,6 @@ footer {
 .faq-answer {
   font-size: 0.9rem;
   color: var(--color-brown2);
-  /* padding: 0.3rem 0.4rem; */
   padding: 0 0.5rem;
   margin: 0 0.5rem;
   border-left: 1px dashed var(--color-brown2);
@@ -389,8 +388,8 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 250ms ease-out, opacity 150ms linear;
-  /* border: 1px solid green; */
 }
+
 .show-hide-content .faq-answer {
   opacity: 1;
 }
@@ -582,7 +581,7 @@ footer {
   .main-grid-container {
   grid-template-columns: 
   2rem 5fr 2fr 2rem;
-}
+  }
 
   .introduction h2,
   .card h2 {
@@ -594,11 +593,11 @@ footer {
   .card {
   grid-template-columns: 200px 1fr;
   gap: 1.3rem;
-}
+  }
 
   .sidebar h2 {
   font-size: 1rem;
-}
+ }
 }
 
 @media screen and (max-width: 950px) {
@@ -611,7 +610,7 @@ footer {
   '. sidebar sidebar .'
   '. main main .'
   'footer footer footer footer';
-}
+  }
 
   .introduction h2,
   .card h2 {
@@ -623,7 +622,7 @@ footer {
   .card {
   grid-template-columns: 240px 1fr;
   gap: 1.3rem;
-}
+  }
 
   .sidebar {
   margin: 1.5rem 0 0;
@@ -647,15 +646,14 @@ footer {
   }
   .coffee-facts div {
   flex: 1 1 250px;
-}
-
+ }
 }
 
 @media screen and (max-width: 680px) {
   .main-grid-container {
   grid-template-columns: 
   1.5rem 5fr 2fr 1.5rem;
-}
+  }
 
   .hero h1 {
   font-size: 2.9rem;
@@ -665,7 +663,7 @@ footer {
   }
   .hero-logo-div img {
   height: 160px;
-}
+  }
 
   .card {
   grid-template-rows: min-content auto auto;
@@ -687,12 +685,7 @@ footer {
   display: block;
   }
 
-/*   .nav-toggle {
-  display: block;
-  } */
   .menu-options {
     display: none !important;
-  /* height: 0;
-  overflow: hidden; */
   }
 }
