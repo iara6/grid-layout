@@ -22,7 +22,6 @@ threeBarsBtn.addEventListener('click', () => {
 });
 
 /* clicking outside the dropdown menu */
-
 window.addEventListener('click', (event) => {
   if (!dropdownMenu.contains(event.target) && !threeBarsBtn.contains(event.target)) {
     dropdownMenu.classList.remove('show');
@@ -104,7 +103,6 @@ images.forEach(img => {
     document.body.style.overflow = 'hidden';
   });
 });
-
 
 const closeBtn = document.querySelector('.close-button');
 
