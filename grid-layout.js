@@ -16,15 +16,18 @@ switchBtn.addEventListener('click', () => {
 *************************************/
 const threeBarsBtn = document.querySelector('.three-bars-btn-div');
 const dropdownMenu = document.querySelector('.dropdown-menu'); 
+const navToggleBtn = document.querySelector('.nav-toggle');
 /* height:  233.353px */
 threeBarsBtn.addEventListener('click', () => {
   dropdownMenu.classList.toggle('show');
+  navToggleBtn.classList.toggle('change');
 });
 
 /* clicking outside the dropdown menu */
 window.addEventListener('click', (event) => {
   if (!dropdownMenu.contains(event.target) && !threeBarsBtn.contains(event.target)) {
     dropdownMenu.classList.remove('show');
+    navToggleBtn.classList.remove('change');
   }
 });
 
@@ -117,3 +120,5 @@ window.onclick = function(e) {
     document.body.style.overflow = 'auto';
   }
 };
+
+
